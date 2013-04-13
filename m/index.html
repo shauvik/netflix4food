@@ -40,12 +40,88 @@
                         <img style="width: 100%; height: 100%" src="food.jpg" />
                     </div>
                 </a>
-                <a id="login" data-role="button" href="login.html">
+                <a id="login" data-role="button" href="#login-page">
                     Login
                 </a>
-                <a id="signup" data-role="button" href="signup.html">
+                <a id="signup" data-role="button" href="#signup-page">
                     Signup
                 </a>
+            </div>
+        </div>
+
+        <!-- Login Page -->
+        <div data-role="page" id="login-page">
+            <div data-role="content">
+                <h2>
+                    Login
+                </h2>
+                <form action="login.php" method="POST">
+                    <div data-role="fieldcontain">
+                        <label for="textinput3">
+                            Username
+                        </label>
+                        <input name="username" id="textinput3" placeholder="" value="" type="text" />
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="textinput4">
+                            Password
+                        </label>
+                        <input name="password" id="textinput4" placeholder="" value="" type="password" />
+                    </div>
+                    <input type="submit" value="Login" />
+                </form>
+                <a href="signup.html">Create an account instead?</a>
+            </div>
+        </div>
+
+                <!-- Home -->
+        <div data-role="page" id="page1">
+            <div data-role="content">
+                <h2>
+                    Sign Up
+                </h2>
+                <form action="signup.php" method="POST">
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                            <legend>
+                                I want to:
+                            </legend>
+                            <input id="radio1" name="type" value="radio1" type="radio" />
+                            <label for="radio1">
+                                Buy food
+                            </label>
+                            <input id="radio2" name="type" value="radio2" type="radio" />
+                            <label for="radio2">
+                                Sell food
+                            </label>
+                        </fieldset>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="textinput3">
+                            Username
+                        </label>
+                        <input name="username" id="textinput3" placeholder="" value="" type="text" />
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="textinput4">
+                            Password
+                        </label>
+                        <input name="password" id="textinput4" placeholder="" value="" type="password" />
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="textinput5">
+                            Phone
+                        </label>
+                        <input name="" id="textinput5" placeholder="" value="" type="tel" />
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="textinput6">
+                            Email
+                        </label>
+                        <input name="email" id="textinput6" placeholder="" value="" type="email" />
+                    </div>
+                    <input type="submit" value="Sign me up" />
+                </form>
             </div>
         </div>
     </body>
