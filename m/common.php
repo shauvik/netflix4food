@@ -9,7 +9,7 @@
 
 
 function get_database_connection() {
-    $mysqli = new mysqli('mysql.shauvik.com', 'atsw_user', 'JE#9nWHh', 'atlsw_db');
+    $mysqli = new mysqli('mysql.shauvik.com', 'atlsw_user', 'JE#9nWHh', 'atlsw_db');
 
     /* check connection */
     if (mysqli_connect_errno()) {
