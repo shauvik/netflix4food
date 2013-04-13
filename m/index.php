@@ -14,9 +14,18 @@
         <script src="my.js"></script>
         <!-- User-generated css -->
         <style>
+            .error{
+                color: red;
+                font-weight: bold;
+            }
         </style>
         <!-- User-generated js -->
         <script>
+            $("#target").click(function() {
+                alert("Handler for .click() called.");
+            });
+
+
             try {
 
     $(function() {
@@ -64,6 +73,12 @@
                 <h2>
                     Login
                 </h2>
+                 <?php
+
+                   if(isset($_GET['error'])){
+                       echo "<div class=\"error\">{$_GET['error']}</div>";
+                   }
+                  ?>
                 <form action="login.php" method="POST" data-ajax="false">
                     <div data-role="fieldcontain">
                         <label for="textinput3">
@@ -94,7 +109,13 @@
                 <h2>
                     Sign Up
                 </h2>
-                <form action="entry.php" method="POST" data-ajax="false">
+                <?php
+
+                if(isset($_GET['error'])){
+                    echo "<div class=\"error\">{$_GET['error']}</div>";
+                }
+                ?>
+                <form action="entry.php"  enctype="multipart/form-data" method="POST" data-ajax="false">
                         <div id="role" data-role="fieldcontain">
                             <fieldset data-role="controlgroup" data-type="horizontal">
                                 <legend>
@@ -124,7 +145,7 @@
                             <label for="textinput3">
                                 Username
                             </label>
-                            <input name="username" id="textinput3" placeholder="" value="" type="text" />
+                            <input name="username" id="textinput3" placeholder="" value="" type="text"/>
                         </div>
                         <div data-role="fieldcontain">
                             <label for="textinput4">

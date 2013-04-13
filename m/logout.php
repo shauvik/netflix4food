@@ -3,4 +3,4 @@
 
 $_SESSION['loggedIn'] = false;
 
-header("Location: index.html");
+header("Location: index.php");
