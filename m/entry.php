@@ -1,7 +1,7 @@
 <?php
 
 include_once("common.php");
-
+ error_reporting(E_ALL);
 function saveSeller()
 {
 
@@ -23,8 +23,9 @@ function saveSeller()
    // $stmt->bind_param($role, $name, $phone, $email, $deliver, $rate, $location, $description) or die("Bind error:".$mysqli->error);
    // $stmt->execute() or die("Mysql exec error:".$mysqli->error);	
 
-   $sql = "INSERT into users (userName, role, name, phone, email, deliver, rate, location, description) VALUES('$userName', ''$role', '$name', '$phone', '$email' , $deliver, '$rate', '$location', '$description')";
-   $mysqli = get_database_connection();
+   $sql = "INSERT into users (userName, role, name, phone, email, deliver, rate, location, description) VALUES('$userName', '$role', '$name', '$phone', '$email' , $deliver, '$rate', '$location', '$description')";
+   print $sql;
+    $mysqli = get_database_connection();
    //echo "<br />Query:".$sql;
    $mysqli->query($sql) or die("Error in mysql query");
    $mysqli->close();
