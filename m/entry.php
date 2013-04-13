@@ -15,7 +15,7 @@ function saveSeller()
    $rate = $_POST['rate'];
    $location = $_POST['location'];
    $description = $_POST['description'];
-   $userName = $_POST['userName'];
+   $userName = $_POST['username'];
 
    // $sql = "INSERT into users (role, name, phone, email, deliver, rate, location, description) VALUES(?, ?, ?, ? ,?, ?, ?, ?)";
    // $mysqli = get_database_connection();
