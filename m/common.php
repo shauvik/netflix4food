@@ -1,12 +1,6 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: gewthen
- * Date: 4/13/13
- * Time: 11:58 AM
- * To change this template use File | Settings | File Templates.
- */
-
+ini_set('display_errors', '1');
+error_reporting(E_ALL);
 
 function get_database_connection() {
     $mysqli = new mysqli('mysql.shauvik.com', 'atlsw_user', 'JE#9nWHh', 'atlsw_db');
@@ -17,4 +11,9 @@ function get_database_connection() {
         exit();
     }
     return $mysqli;
+}
+
+
+function is_loggedIn(){
+    return $_SESSION['loggedIn']===true;
 }

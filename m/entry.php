@@ -15,7 +15,7 @@ function saveSeller()
    $userName = $_POST['username'];
 
    $sql = "INSERT into users (userName, role, name, phone, email, deliver, rate, location, description) VALUES('$userName', '$role', '$name', '$phone', '$email' , $deliver, '$rate', '$location', '$description')";
-    $mysqli = get_database_connection();
+   $mysqli = get_database_connection();
    $mysqli->query($sql) or die("Error in mysql query");
    $mysqli->close();
 }
