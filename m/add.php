@@ -22,7 +22,7 @@ include_once("common.php");
 		</div>
 
 		<div data-role="content" class="ui-content" role="main">
-			<img src="/m/upload/tang.jpg" style="width:200px;height:200px;"/>
+			<img src="/m/upload/tang.jpg" style="max-width:200px;max-height:200px;"/>
 			<h3>Oranges</h3>
 			<h4>Citrus Fruit, Qty Available:</h4>
 			<h4>Price: $0.5 each</h4>
