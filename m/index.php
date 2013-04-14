@@ -242,17 +242,111 @@
                         <img style="width: 50%; height: 50%" src="fuber_logo.png" />
                     </div>
                 </a>
-                <h3>About Us</h3>
+                <h1>About Us</h1>
                 <p>
                     We are .... 
 
                 </p>
-                <h3>FAQ</h3>
-                <p>
-                    <ul>
-                        <li>Faq 1: </li>
-                    </ul>
-                </p>
+                    <h1 class="top-h1">
+                    Frequently Asked Questions
+                    </h1>
+                    <div class="top-faq">
+                    <h4>
+                    <a href="#ok-so-how-does-this-work" data-ajax="false">Ok, so how does this work?</a>
+                    </h4>
+                    <h4>
+                    <a href="#alright-i-signed-up-what-happens-next" data-ajax="false">Alright, I signed up, what happens next?</a>
+                    </h4>
+                    <h4>
+                    <a href="#how-do-you-match-the-two-groups" data-ajax="false">How do you register? </a>
+                    </h4>
+                    <h4>
+                    <a href="#what-part-of-my-facebook-profile-are-you-looking-at" data-ajax="false">Can I register as Seller?</a>
+                    </h4>
+                    <h4>
+                    <a href="#i-included-a-few-friends-as-my-wingmen-when-i-signed-up-do-i-need-to-bring-those-friends" data-ajax="false">Can I upload photos of the fruit?</a>
+                    </h4>
+                    <h4>
+                    <a href="#when-do-i-find-out-who-i-m-going-to-meet-and-how-will-we-find-them" data-ajax="false">How do you Manage Inventory?</a>
+                    </h4>
+                    <h4>
+                    <a href="#how-do-i-cancel-or-change-the-date-of-my-grouper" data-ajax="false">Is Fuber available in Spanish? </a>
+                    </h4>
+                    <h4>
+                    <a href="#what-kind-of-bars-and-lounges-do-you-work-with" data-ajax="false">How are prices determined?</a></h4></div>
+                    <div class="bottom-faq">
+                    <h1 class="bottom-h1">
+                    Frequently Given Answers
+                    </h1>
+                    <div class="answer-con" id="ok-so-how-does-this-work">
+                    <h3>
+                    Ok, so how does this work?
+                    </h3>
+                    <div class="answer">
+                      <p>Good question, glad you asked. We set connect buyer and sellers of food. We makeit easy to purchase, negotiate, and have food delivered.</p>
+                      <p><img src="http://fubar20130414.s3.amazonaws.com/deliver.PNG" alt="" width="128"></p>
+                    </div>
+                    </div>
+                    <div class="answer-con" id="alright-i-signed-up-what-happens-next">
+                    <h3>
+                    Alright, I signed up, what happens next?
+                    </h3>
+                    <div class="answer">
+                      <p>Be you can shop choose your items. They will be delivered. Be sure to order before the food sells out.</p>
+                      <p><img src="http://fubar20130414.s3.amazonaws.com/inven5.PNG" alt="" width="128"></p>
+                    </div>
+                    </div>
+                    <div class="answer-con" id="how-do-you-match-the-two-groups">
+                    <h3>
+                    How do you register?
+                    </h3>
+                    <div class="answer"> 
+                      <p>Go to FUBER.co and click Register. </p>
+                      <p><img src="http://fubar20130414.s3.amazonaws.com/login.PNG" width="128"> <img src="http://fubar20130414.s3.amazonaws.com/login3.PNG" alt="" width="128"></p>
+                      <p>&nbsp;</p>
+                    </div>
+                    </div>
+                    <div class="answer-con" id="what-part-of-my-facebook-profile-are-you-looking-at">
+                    <h3>Can I register as Seller?</h3>
+                    <div class="answer"> 
+                      <p>Yes. It is easy to register as a seller. It is important to make sure you are able to keep your inventory accurate.</p>
+                      <p><img src="http://fubar20130414.s3.amazonaws.com/login2.PNG" alt="" width="128"></p>
+                    </div>
+                    </div>
+                    <div class="answer-con" id="i-included-a-few-friends-as-my-wingmen-when-i-signed-up-do-i-need-to-bring-those-friends">
+                    <h3>Can I upload photos of the fruit?</h3>
+                    <div class="answer"> 
+                      <p>Yes it is easy to do so. We have written our application on JQueery Mobile and HTML5. You can directly take photos from your camera. </p>
+                      <p><img src="http://fubar20130414.s3.amazonaws.com/photo.PNG" alt="" width="128"></p>
+                    </div>
+                    </div>
+                    <div class="answer-con" id="when-do-i-find-out-who-i-m-going-to-meet-and-how-will-we-find-them">
+                    <h3>How do you Manage Inventory?</h3>
+                    <div class="answer"> 
+                      <p>It is easy to manage to inventory. Just Follow the .</p>
+                      <p><img src="http://fubar20130414.s3.amazonaws.com/inv.PNG" alt="" width="128"></p>
+                      <p>&nbsp;</p>
+                    </div>
+                    </div>
+                    <div class="answer-con" id="how-do-i-cancel-or-change-the-date-of-my-grouper">
+                    <h3>
+                    Is Fuber available in Spanish?
+                    </h3>
+                    <div class="answer"> 
+                      <p>We use the Google translate API, and have a spanish version for our sellers. </p>
+                      <p>&nbsp;</p>
+                    </div>
+                    </div>
+                    <div class="answer-con" id="what-kind-of-bars-and-lounges-do-you-work-with">
+                    <h3>How are prices determined?</h3>
+                    <div class="answer"> 
+                      <p>Fuber takes a small fee, and prices are determined by the market. </p>
+                      <p><img src="http://fubar20130414.s3.amazonaws.com/deliver.PNG" alt="" width="128"></p>
+                    </div>
+                    </div>
+                    <h3>&nbsp;</h3>
+                    </div>
+                    </div>
             </div>
         </div>
 
