@@ -126,6 +126,26 @@ if(!is_loggedIn()) {
                         </td>
                         <td><img src="images/del.png" /></td>
                     </tr>
+                    <tr>
+                        <td><img src="upload/watermellon.jpg" class="thumb" /></td>
+                        <td><b>Watermellon</b>
+                            <ul>
+                                <li>Qty: 4 nos</li>
+                                <li>Price: $3.60</li>
+                            </ul>
+                        </td>
+                        <td><img src="images/del.png" /></td>
+                    </tr>
+                    <tr>
+                        <td><img src="upload/pineapple.jpg" class="thumb" /></td>
+                        <td><b>Pineapple</b>
+                            <ul>
+                                <li>Qty: 3 nos</li>
+                                <li>Price: $2.40</li>
+                            </ul>
+                        </td>
+                        <td><img src="images/del.png" /></td>
+                    </tr>
                 </table>
 
                 <h2>Add To Inventory</h2>
@@ -223,6 +243,26 @@ if(!is_loggedIn()) {
                         <p class="ui-li-desc">
                             Vegetable, Qty: 50 <br/>
                             Price: $0.47 each (compared to $1.68 at Walmart)
+                        </p>
+                    </a>
+                </li>
+                <li data-filtertext="Watermellon" data-theme="c">
+                    <a href="add.php?id=1" data-rel="dialog">
+                        <img src="upload/watermellon.jpg" class="ui-li-thumb">
+                        <h3 class="ui-li-heading">Watermellon</h3>
+                        <p class="ui-li-desc">
+                            Fruit, Qty: 4 <br/>
+                            Price: $3.60 each (compared to $5.00 at Walmart)
+                        </p>
+                    </a>
+                </li>
+                <li data-filtertext="Pineapple" data-theme="c">
+                    <a href="add.php?id=1" data-rel="dialog">
+                        <img src="upload/pineapple.jpg" class="ui-li-thumb">
+                        <h3 class="ui-li-heading">Pineapple</h3>
+                        <p class="ui-li-desc">
+                            Fruit, Qty: 4 <br/>
+                            Price: $2.40 each (compared to $4.99 at Publix)
                         </p>
                     </a>
                 </li>
