@@ -230,7 +230,7 @@ if(!is_loggedIn()) {
 
 
               <?php
-                }  else if(role == 'buyer') {
+                }  else if($role == 'buyer') {
               ?>
                 <h2>My Orders</h2>  
 
@@ -262,7 +262,7 @@ if(!is_loggedIn()) {
 
 
               <?php
-                }  else if(role == 'buyer') {
+                }  else if($role == 'buyer') {
               ?>
                 <h2>Place Order</h2>  
 
