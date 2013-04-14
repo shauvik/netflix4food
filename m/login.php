@@ -46,6 +46,7 @@ function error_with_message($msg){
 
 if(is_loggedIn()){
   // go to inventory page
+    header("Location: home.php");
 } else {
   login();
 }

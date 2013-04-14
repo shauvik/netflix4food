@@ -38,7 +38,7 @@ function username_exists()
     $userName = $_POST['username'];
     $email = $_POST['email'];
 
-    $sql = "SELECT count(*) FROM users where username = '$userName' OR email = '$email'";
+    $sql = "SELECT count(*) FROM users where username LIKE '$userName' OR email LIKE '$email'";
     $mysqli = get_database_connection();
     $result = $mysqli->query($sql);
 
