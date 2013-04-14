@@ -32,7 +32,9 @@ include_once("common.php");
 	            </label>
 	            <input name="quantity" id="textinput1" placeholder="" value="" type="text">
         	</div>
-			<a href="addconfirm.php" data-role="button" data-rel="back" data-theme="b" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-b"><span class="ui-btn-inner"><span class="ui-btn-text">Order</span></span></a>       
+			<a href="#" data-role="button" data-rel="back" data-theme="b" data-corners="true" data-shadow="true" 
+			data-iconshadow="true" data-wrapperels="span" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-b">
+			<span class="ui-btn-inner"><span class="ui-btn-text">Order</span></span></a>       
 		</div>
 	</div>
 
