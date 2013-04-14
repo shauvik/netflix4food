@@ -7,8 +7,8 @@ $ipod = strpos($_SERVER['HTTP_USER_AGENT'],"iPod");
 
 if ($iphone || $android || $palmpre || $ipod || $berry == true) 
 { 
-header('Location: http://54.225.98.120/m/');
+header('Location: http://fuber.co/m/');
 //OR
-echo "<script>window.location='http://54.225.98.120/m/'</script>";
+echo "<script>window.location='http://fuber.co/m/'</script>";
 }
 ?>
