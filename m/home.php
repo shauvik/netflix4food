@@ -25,7 +25,24 @@ if(!is_loggedIn()) {
                 color: red;
                 font-weight: bold;
             }
-
+            .success{
+                color: green;
+                font-weight: bold;
+            }
+            .homecontent{
+                padding-bottom: 60px;
+            }
+            .thumb{
+                max-width: 100px;
+                max-height: 100px;
+            }
+            .table-stroke{
+                width: 100%;
+            }
+            .table-stroke tbody td {
+              border-top: 1px solid rgba(0, 0, 0, .05);
+              border-bottom: 1px solid rgba(0, 0, 0, .05);
+            }
         </style>
         <!-- User-generated js -->
         <script>
@@ -52,14 +69,41 @@ if(!is_loggedIn()) {
             <div data-theme="a" data-role="header">
                 <h3>Fuber</h3>
             </div>
-            <div data-role="content">
+            <div data-role="content" class="homecontent">
 		      <?php
+
+               if(isset($_GET['msg'])){
+                   echo "<div class=\"success\">{$_GET['msg']}</div>";
+               }
+
               $role = get_current_user_role();
               if($role == 'seller') {
               ?>
-                <h2>
-                    Add Inventory
-                </h2>
+                <h2>Current Inventory</h2>
+                <table data-role="table" id="inv-table" data-mode="reflow" class="table-stroke">
+                    <tr>
+                        <td><img src="upload/tang.jpg" class="thumb"/></td>
+                        <td><b>Tangerines</b>
+                            <ul>
+                                <li>Qty: 124 nos</li>
+                                <li>Price: $30</li>
+                            </ul>
+                        </td>
+                        <td><img src="images/del.png" /></td>
+                    </tr>
+                    <tr>
+                        <td><img src="upload/mang.jpg" class="thumb" /></td>
+                        <td><b>Mangoes</b>
+                            <ul>
+                                <li>Qty: 16 nos</li>
+                                <li>Price: $18</li>
+                            </ul>
+                        </td>
+                        <td><img src="images/del.png" /></td>
+                    </tr>
+                </table>
+
+                <h2>Add To Inventory</h2>
                 <form action="saveInventory.php" method="POST" data-ajax="false">
                     <div data-role="fieldcontain">
                         <label for="textinput1">
