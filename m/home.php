@@ -179,9 +179,6 @@ if(!is_loggedIn()) {
                 } else if($role == 'buyer') {
                     
               ?>
-            <div data-role="fieldcontain">
-                <input name="search" id="searchinput1" placeholder="Search" value="" type="search">
-            </div>
             <ul data-role="listview" data-inset="true" data-filter="true">
                 <li data-filtertext="Tangerines Fruit" data-theme="c">
                     <a href="#page1" data-transition="slide">
