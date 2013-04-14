@@ -60,7 +60,7 @@ function save_uploaded_file($file){
             {
                 move_uploaded_file($_FILES[$file]["tmp_name"],
                     "upload/" . $name);
-//                echo "Stored in: " . "upload/" . $name;
+                echo "Stored in: " . "upload/" . $name;
                 return "upload/" . $name;
             }
         }

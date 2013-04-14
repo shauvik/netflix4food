@@ -26,7 +26,7 @@ function saveSeller()
    $mysqli->query($sql) or die("Error in mysql query");
    $mysqli->close();
 //    print "test";
-    header("Location: /");
+    header("Location: index.php#login-page");
 }
 
 
