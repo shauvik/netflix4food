@@ -235,7 +235,7 @@
         </div>
 
         <!-- About  -->
-        <div data-role="page" class="colorpage" id="about-page">
+        <div data-role="page" id="about-page">
            <div data-role="content">
                 <a href="#homepage">
                     <div style="display: inline;text-align:center;">
