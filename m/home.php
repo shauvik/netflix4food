@@ -181,9 +181,9 @@ if(!is_loggedIn()) {
               ?>
             <ul data-role="listview" data-inset="true" data-filter="true">
                 <li data-filtertext="Tangerines Fruit" data-theme="c">
-                    <a href="#page1" data-transition="slide">
+                    <a href="add.php?id=1" data-rel="dialog">
                         <img src="upload/tang.jpg" class="ui-li-thumb">
-                        <h3 class="ui-li-heading">Tangerines</h3>
+                        <h3 class="ui-li-heading">Oranges</h3>
                         <p class="ui-li-desc">
                             Citrus Fruit, Qty: 124 <br/>
                             Price: $0.5 for 3 (compared to $0.87 per lb at Publix)
@@ -191,7 +191,7 @@ if(!is_loggedIn()) {
                     </a>
                 </li>
                 <li data-filtertext="Mangoes Fruit" data-theme="c">
-                    <a href="#page1" data-transition="slide">
+                    <a href="add.php?id=1" data-rel="dialog">
                         <img src="upload/mang.jpg" class="ui-li-thumb">
                         <h3 class="ui-li-heading">Mangoes</h3>
                         <p class="ui-li-desc">
