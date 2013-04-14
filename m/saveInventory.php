@@ -19,6 +19,7 @@ function newInventory(){
     $price = $_POST['price'];
     $user_id = get_current_user_id();
     $sql = "INSERT INTO inventory (name, quantity, image_url, organic, unit, price, user_id) VALUES('$name', $quantity, '$image_url', $organic, '$unit', $price, $user_id)";
+    echo "SQL:".$sql;
     $mysqli = get_database_connection();
     $mysqli->query($sql) or die("Error in mysql query");
     $mysqli->close();
