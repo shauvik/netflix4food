@@ -20,7 +20,7 @@ function get_current_user_id(){
 }
 
 function get_current_user_role(){
-    return isset($_SESSION['role']) ?: 'seller';
+    return isset($_SESSION['role']) ? $_SESSION['role']: 'seller';
 }
 
 function is_loggedIn(){
