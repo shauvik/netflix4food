@@ -131,25 +131,25 @@
                 </h2>
                 <?php
 
-                if(isset($_GET['error'])){
-                    echo "<div class=\"error\">{$_GET['error']}</div>";
+                if(isset($error)){
+                    echo "<div class=\"error\">$error</div>";
                 }
                 ?>
-                <form action="entry.php"  enctype="multipart/form-data" method="POST" data-ajax="false">
+                <form action="entry.php#signup-page"  enctype="multipart/form-data" method="POST" data-ajax="false">
                         <div id="role" data-role="fieldcontain">
                             <fieldset data-role="controlgroup" data-type="horizontal">
                                 <legend>
                                     I am a:
                                 </legend>
-                                <input id="radio1" name="role" value="seller" type="radio" />
+                                <input id="radio1" name="role" value="seller" type="radio" <?php if ($role == "seller") echo 'checked="checked";' ?>/>
                                 <label for="radio1">
                                     Seller
                                 </label>
-                                <input id="radio2" name="role" value="buyer" type="radio" />
+                                <input id="radio2" name="role" value="buyer" type="radio" <?php if ($role == "buyer") echo 'checked="checked"'; ?>/>
                                 <label for="radio2">
                                     Buyer
                                 </label>
-                                <input id="radio3" name="role" value="deliverer" type="radio" />
+                                <input id="radio3" name="role" value="deliverer" type="radio" <?php if ($role == "deliverer") echo 'checked="checked"'; ?> />
                                 <label for="radio3">
                                     Deliverer
                                 </label>
@@ -159,13 +159,13 @@
                             <label for="textinput1">
                                 Name
                             </label>
-                            <input name="name" id="textinput1" placeholder="" value="" type="text" />
+                            <input name="name" id="textinput1" placeholder="" value="<?php echo $name; ?>" type="text"  />
                         </div>
                         <div data-role="fieldcontain">
                             <label for="textinput3">
                                 Username
                             </label>
-                            <input name="username" id="textinput3" placeholder="" value="" type="text"/>
+                            <input name="username" id="textinput3" placeholder="" value="<?php echo $userName; ?>" type="text" />
                         </div>
                         <div data-role="fieldcontain">
                             <label for="textinput4">
@@ -177,13 +177,13 @@
                             <label for="textinput5">
                                 Phone
                             </label>
-                            <input name="phone" id="textinput5" placeholder="" value="" type="tel" />
+                            <input name="phone" id="textinput5" placeholder="" value="<?php if($phone == 0) echo ""; else echo $phone; ?>" type="tel"  />
                         </div>
                         <div data-role="fieldcontain">
                             <label for="textinput6">
                                 Email
                             </label>
-                            <input name="email" id="textinput6" placeholder="" value="" type="email" />
+                            <input name="email" id="textinput6" placeholder="" value="<?php echo $email; ?>" type="email" />
                         </div>
                         <div data-role="fieldcontain">
                             <label for="photo_control">
@@ -196,11 +196,11 @@
                                 <legend>
                                     Will you Deliver?
                                 </legend>
-                                <input id="radio4" name="deliver" value="1" type="radio" />
+                                <input id="radio4" name="deliver" value="1" type="radio" <?php if ($deliver == 1) echo 'checked="checked"'; ?>/>
                                 <label for="radio4">
                                     Yes
                                 </label>
-                                <input id="radio5" name="deliver" value="0" type="radio" />
+                                <input id="radio5" name="deliver" value="0" type="radio" <?php if ($deliver == 0) echo 'checked="checked"'; ?>/>
                                 <label for="radio5">
                                     No
                                 </label>
@@ -210,14 +210,14 @@
                             <label for="textinput8">
                                 Delivery rate ($ per hour)
                             </label>
-                            <input name="rate" id="textinput8" placeholder="" value="" type="text" />
+                            <input name="rate" id="textinput8" placeholder="" value="<?php echo $rate; ?>" type="text" />
                         </div>
 
                         <div data-role="fieldcontain">
                             <label for="textinput9">
                                 Location
                             </label>
-                            <input name="location" id="textinput9" placeholder="" value="" type="text" />
+                            <input name="location" id="textinput9" placeholder="" value="<?php echo $location; ?>" type="text" />
                         </div>
 
 
@@ -225,7 +225,7 @@
                             <label for="textinput10">
                                 Details
                             </label>
-                            <textarea name="description" id="textinput10" placeholder="" value=""></textarea>
+                            <textarea name="description" id="textinput10" placeholder="" ><?php echo $description; ?></textarea>
                         </div>
 
                     <input type="submit" value="Sign Up" />
