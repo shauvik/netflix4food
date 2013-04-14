@@ -38,14 +38,13 @@ function username_exists()
     $userName = $_POST['username'];
     $email = $_POST['email'];
 
-    $sql = "SELECT count(*) FROM users where username LIKE '$userName' OR email LIKE '$email'";
+    $sql = "SELECT * FROM users where username LIKE '$userName' OR email LIKE '$email'";
+    echo $sql;
     $mysqli = get_database_connection();
-    $result = $mysqli->query($sql);
-
-    if ($result->num_rows > 0) {
-        $userExists = true;
-    } else {
-        $userExists = false;
+    if($result = $mysqli->query($sql)) {
+      if ($result->num_rows > 0) {
+          $userExists = true;
+      }
     }
 
     $mysqli->close();
