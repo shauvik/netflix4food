@@ -9,9 +9,7 @@ function saveSeller()
         return;
     }
 //
-    $filePath = save_uploaded_file("photo");
-    print_r($_FILES);
-
+   $filePath = save_uploaded_file("photo");
    $role = $_POST['role'] ?: "seller";
    $name = $_POST['name'] ?: "";
    $phone = $_POST['phone'] ?: 0;
@@ -24,7 +22,6 @@ function saveSeller()
 
 
    $sql = "INSERT into users (userName, role, name, phone, email, deliver, rate, location, description, photo_url) VALUES('$userName', '$role', '$name', '$phone', '$email' , $deliver, '$rate', '$location', '$description', '$filePath')";
-    print $sql;
     $mysqli = get_database_connection();
    $mysqli->query($sql) or die("Error in mysql query");
    $mysqli->close();
