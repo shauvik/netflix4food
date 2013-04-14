@@ -25,8 +25,7 @@ function get_current_user_role(){
 
 function is_loggedIn(){
     global $_SESSION;
-    print_r($_SESSION);
-    return $_SESSION['loggedIn']===true;
+    return isset($_SESSION['loggedIn']) && $_SESSION['loggedIn']===true;
 }
 
 
