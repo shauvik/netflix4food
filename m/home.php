@@ -118,7 +118,7 @@ if(!is_loggedIn()) {
                     </tr>
                     <tr>
                         <td><img src="upload/pepper.jpg" class="thumb" /></td>
-                        <td><b>Peppers</b>
+                        <td><b>Red Peppers</b>
                             <ul>
                                 <li>Qty: 50 nos</li>
                                 <li>Price: $18</li>
@@ -236,10 +236,10 @@ if(!is_loggedIn()) {
                     </a>
                 </li>
                 </li>
-                <li data-filtertext="Peppers" data-theme="c">
+                <li data-filtertext="Red Peppers" data-theme="c">
                     <a href="add.php?id=1" data-rel="dialog">
                         <img src="upload/pepper.jpg" class="ui-li-thumb">
-                        <h3 class="ui-li-heading">Peppers</h3>
+                        <h3 class="ui-li-heading">Red Peppers</h3>
                         <p class="ui-li-desc">
                             Vegetable, Qty: 50 <br/>
                             Price: $0.47 each (compared to $1.68 at Walmart)
@@ -292,13 +292,75 @@ if(!is_loggedIn()) {
               if($role == 'seller') {
               ?>
                 <h2>Orders for me</h2>
-
+                  <table>
+                      <tr>
+                          <th>Customer</th>
+                          <th>Item</th>
+                          <th>Quantity</th>
+                          <th>Price</th>
+                      </tr>
+                      <tr>
+                          <td><a href="">Bob Smith</a></td>
+                          <td>Orange</td>
+                          <td>30</td>
+                          <td>$15.00</td>
+                      </tr>
+                      <tr>
+                          <td><a href="">Bob Smith</a></td>
+                          <td>Plum</td>
+                          <td>1 bag</td>
+                          <td>$1.75</td>
+                      </tr>
+                      <tr>
+                          <td><a href="">Sue Pinkerton</a></td>
+                          <td>Plum</td>
+                          <td>2 bags</td>
+                          <td>$2.50</td>
+                      </tr>
+                      <tr>
+                          <td><a href="">Sue Pinkerton</a></td>
+                          <td>Bananas</td>
+                          <td>100</td>
+                          <td>$16.40</td>
+                      </tr>
+                  </table>
 
               <?php
                 }  else if($role == 'buyer') {
               ?>
-                <h2>My Orders</h2>  
-
+                <h2>My Orders</h2>
+                  <table cellpadding="1">
+                      <tr>
+                          <th>Seller</th>
+                          <th>Item</th>
+                          <th>Quantity</th>
+                          <th>Price</th>
+                      </tr>
+                      <tr>
+                          <td><a href="">Martinez</a></td>
+                          <td>Orange</td>
+                          <td>30</td>
+                          <td>$15.00</td>
+                      </tr>
+                      <tr>
+                          <td><a href="">Martinez</a></td>
+                          <td>Plum</td>
+                          <td>1 bags</td>
+                          <td>$1.75</td>
+                      </tr>
+                      <tr>
+                          <td><a href="">Martinez</a></td>
+                          <td>Mango</td>
+                          <td>4</td>
+                          <td>$5.44</td>
+                      </tr>
+                      <tr>
+                          <td><a href="">Martinez</a></td>
+                          <td>Bananas</td>
+                          <td>100</td>
+                          <td>$16.40</td>
+                      </tr>
+                  </table>
 
               <?php
                 }   
