@@ -116,6 +116,16 @@ if(!is_loggedIn()) {
                         </td>
                         <td><img src="images/del.png" /></td>
                     </tr>
+                    <tr>
+                        <td><img src="upload/pepper.jpg" class="thumb" /></td>
+                        <td><b>Peppers</b>
+                            <ul>
+                                <li>Qty: 50 nos</li>
+                                <li>Price: $18</li>
+                            </ul>
+                        </td>
+                        <td><img src="images/del.png" /></td>
+                    </tr>
                 </table>
 
                 <h2>Add To Inventory</h2>
@@ -202,6 +212,17 @@ if(!is_loggedIn()) {
                         <p class="ui-li-desc">
                             Fruit, Qty: 18 <br/>
                             Price: $1.36 each (compared to $2 at Publix)
+                        </p>
+                    </a>
+                </li>
+                </li>
+                <li data-filtertext="Peppers" data-theme="c">
+                    <a href="add.php?id=1" data-rel="dialog">
+                        <img src="upload/pepper.jpg" class="ui-li-thumb">
+                        <h3 class="ui-li-heading">Peppers</h3>
+                        <p class="ui-li-desc">
+                            Vegetable, Qty: 50 <br/>
+                            Price: $0.47 each (compared to $1.68 at Walmart)
                         </p>
                     </a>
                 </li>
