@@ -20,7 +20,7 @@ function get_current_user_id(){
 }
 
 function get_current_user_role(){
-    return $_SESSION['role'];
+    return isset($_SESSION['role']) ?: 'seller';
 }
 
 function is_loggedIn(){
@@ -30,6 +30,8 @@ function is_loggedIn(){
 
 
 function save_uploaded_file($file){
+    if(!isset($_FILES[$file])) return "";
+
     //print_r($_FILES);
     $allowedExts = array("gif", "jpeg", "jpg", "png");
     $extension = end(explode(".", $_FILES[$file]["name"]));

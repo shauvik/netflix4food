@@ -16,7 +16,6 @@ function login(){
     $_SESSION['loggedIn'] = true;
     $_SESSION['username'] = $userName;
     $sql = "SELECT id, role FROM users where username = '$userName' ";
-
     $mysqli = get_database_connection();
     $result = $mysqli->query($sql) or die("Error in mysql query"+$mysqli->error);
     if($result->num_rows > 0) {
@@ -24,7 +23,6 @@ function login(){
             $_SESSION['userId'] = $row['id'];
             $_SESSION['role'] = $row['role'];
         }
-
         login_success();
     }
     else {
@@ -44,11 +42,10 @@ function error_with_message($msg){
     $errorMessage = urlencode($msg);
     header("Location: index.php?error=$errorMessage#login-page");
 }
-
+//
 if(is_loggedIn()){
   // go to inventory page
     header("Location: home.php");
 } else {
   login();
 }
-
