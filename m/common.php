@@ -3,7 +3,7 @@ ini_set('display_errors', '1');
 error_reporting(E_ALL);
 
 function get_database_connection() {
-    $mysqli = new mysqli('mysql.shauvik.com', 'atlsw_user', 'JE#9nWHh', 'atlsw_db');
+    $mysqli = new mysqli('fuber.co', 'fuber', 'JE#9nWHh', 'fuber');
 
     /* check connection */
     if (mysqli_connect_errno()) {

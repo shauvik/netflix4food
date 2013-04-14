@@ -18,6 +18,21 @@
                 color: red;
                 font-weight: bold;
             }
+
+            .colorpage{
+                background-color:   #0176A0;
+                background-image:   -moz-radial-gradient(center, ellipse cover, #F6E4CC 0%, #005077 100%);
+                background-image:   -webkit-radial-gradient(center, ellipse cover, #F6E4CC 0%, #E9967A 100%);
+                background-image:   -o-radial-gradient(center, ellipse cover, #F6E4CC 0%, #005077 100%);
+                background-image:   -ms-radial-gradient(center, ellipse cover, #F6E4CC 0%, #005077 100%);
+                background-image:   radial-gradient(center, ellipse cover, #F6E4CC 0%, #005077 100%);
+                filter:             progid:DXImageTransform.Microsoft.gradient(startColorstr = '#F6E4CC', endColorstr = '#005077', GradientType = 0);
+            }
+
+            .spacer{
+                height: 50px;
+            }
+
         </style>
         <!-- User-generated js -->
         <script>
@@ -40,23 +55,22 @@
     <body>
 
         <!-- Home -->
-        <div data-role="page" id="page1">
-          <div data-theme="a" data-role="header">
-            <h3 id="header">
-              Fuber
-            </h3>
-          </div>
+        <div data-role="page" class="colorpage" id="homepage" style="padding-top: 100px;">
            <div data-role="content">
-                <a href="#page1">
+                <a href="#">
                     <div style="display: inline">
-                        <img style="width: 100%; height: 100%" src="food.jpg" />
+                        <img style="width: 100%; height: 100%" src="fuber_logo.png" />
                     </div>
                 </a>
+                <div class="spacer"></div>
                 <a id="login" data-role="button" href="#login-page">
                     Login
                 </a>
                 <a id="signup" data-role="button" href="#signup-page">
                     Signup
+                </a>
+                <a id="about" data-role="button" href="#about-page">
+                    About Us
                 </a>
             </div>
         </div>
@@ -64,9 +78,8 @@
         <!-- Login Page -->
         <div data-role="page" id="login-page">
           <div data-theme="a" data-role="header">
-            <h3 id="header">
-              Fuber
-            </h3>
+                <h3>Fuber</h3>
+                <a href="#homepage" data-role="button" data-icon="home" data-iconpos="notext" data-theme="a" data-inline="true" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" class="ui-btn ui-btn-inline ui-btn-icon-notext ui-btn-up-a"><span class="ui-btn-inner"><span class="ui-icon ui-icon-home ui-icon-shadow">&nbsp;</span></span></a>
           </div>
 
              <div data-role="content">
@@ -101,9 +114,7 @@
         <!-- Signup -->
         <div data-role="page" id="signup-page">
             <div data-theme="a" data-role="header">
-                <h3>
-                    Fuber
-                </h3>
+                <h3>Fuber</h3>
             </div>
             <div data-role="content">
                 <h2>
@@ -211,6 +222,28 @@
                     <input type="submit" value="Sign Up" />
                     </div>
                 </form>
+            </div>
+        </div>
+
+        <!-- About  -->
+        <div data-role="page" class="colorpage" id="about-page">
+           <div data-role="content">
+                <a href="#homepage">
+                    <div style="display: inline;text-align:center;">
+                        <img style="width: 50%; height: 50%" src="fuber_logo.png" />
+                    </div>
+                </a>
+                <h3>About Us</h3>
+                <p>
+                    We are .... 
+
+                </p>
+                <h3>FAQ</h3>
+                <p>
+                    <ul>
+                        <li>Faq 1: </li>
+                    </ul>
+                </p>
             </div>
         </div>
 

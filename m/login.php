@@ -36,6 +36,7 @@ function login(){
 
 function login_success(){
     // goto another page
+    header("Location: home.php");
 }
 
 function error_with_message($msg){
