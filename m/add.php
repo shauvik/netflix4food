@@ -15,7 +15,7 @@ include_once("common.php");
         <script src="jquery.mobile-1.2.0.min.js"></script>
    </head>
    <body class="ui-mobile-viewport ui-overlay-c">
-<div data-role="page" data-corners="false" data-url="/resources/dialog/dialog8.html" tabindex="0" class="ui-page ui-body-c ui-page-active" style="min-height: 642px;">
+<div data-role="page" data-corners="false" data-url="#" tabindex="0" class="ui-page ui-body-c ui-page-active" style="min-height: 642px;">
 	
 		<div data-role="header" class="ui-header ui-bar-a" role="banner">
 			<h1 class="ui-title" role="heading" aria-level="1">Confirmation</h1>
