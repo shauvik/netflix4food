@@ -61,6 +61,16 @@ if(!is_loggedIn()) {
     console.error("Your javascript has an error: " + error);
   }
         </script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-40132115-1', 'fuber.co');
+          ga('send', 'pageview');
+
+        </script>
     </head>
     <body>
 
@@ -167,7 +177,37 @@ if(!is_loggedIn()) {
                 </form>
               <?php
                 } else if(role == 'buyer') {
-                    echo "Buyer inventory listing";
+                    
+              ?>
+            <div data-role="fieldcontain">
+                <input name="search" id="searchinput1" placeholder="Search" value="" type="search">
+            </div>
+            <ul data-role="listview" data-inset="true" data-filter="true">
+                <li data-filtertext="Tangerines Fruit" data-theme="c">
+                    <a href="#page1" data-transition="slide">
+                        <img src="upload/tang.jpg" class="ui-li-thumb">
+                        <h3 class="ui-li-heading">Tangerines</h3>
+                        <p class="ui-li-desc">
+                            Citrus Fruit, Qty: 124 <br/>
+                            Price: $0.5 for 3 (compared to $0.87 per lb at Publix)
+                        </p>
+                    </a>
+                </li>
+                <li data-filtertext="Mangoes Fruit" data-theme="c">
+                    <a href="#page1" data-transition="slide">
+                        <img src="upload/mang.jpg" class="ui-li-thumb">
+                        <h3 class="ui-li-heading">Mangoes</h3>
+                        <p class="ui-li-desc">
+                            Fruit, Qty: 18 <br/>
+                            Price: $1.36 each (compared to $2 at Publix)
+                        </p>
+                    </a>
+                </li>
+            </ul>
+
+            <?php
+
+
                 }
               ?>
             </div>
@@ -180,10 +220,63 @@ if(!is_loggedIn()) {
                 <h3>Fuber</h3>
             </div>
             <div data-role="content">
+              <?php
 
+               if(isset($_GET['msg'])){
+                   echo "<div class=\"success\">{$_GET['msg']}</div>";
+               }
+
+              $role = get_current_user_role();
+              if($role == 'seller') {
+              ?>
+                <h2>Orders for me</h2>
+
+
+              <?php
+                }  else if(role == 'buyer') {
+              ?>
+                <h2>My Orders</h2>  
+
+
+              <?php
+                }   
+              ?>
             </div>
             <?php footer();?>
         </div>
+
+
+        <!-- Place Order -->
+        <div data-role="page" id="orderdetail">
+            <div data-theme="a" data-role="header">
+                <h3>Fuber</h3>
+            </div>
+            <div data-role="content">
+              <?php
+
+               if(isset($_GET['msg'])){
+                   echo "<div class=\"success\">{$_GET['msg']}</div>";
+               }
+
+              $role = get_current_user_role();
+              if($role == 'seller') {
+              ?>
+                <h2>Acknowledge Order</h2>
+
+
+              <?php
+                }  else if(role == 'buyer') {
+              ?>
+                <h2>Place Order</h2>  
+
+
+              <?php
+                }   
+              ?>
+            </div>
+            <?php footer();?>
+        </div>
+
 
     </body>
 </html>
