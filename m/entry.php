@@ -5,10 +5,10 @@ function saveSeller()
 {
 
     if(username_exists()){
-        echo "user already exits";
+        error_with_message("User already exists.");
         return;
     }
-//
+
    if(isset($_POST['photo']) && !empty($_POST['photo'])){
        $filePath = save_uploaded_file("photo");
    } else {
@@ -57,4 +57,9 @@ function username_exists()
 
 function getSeller(){
 
+}
+
+function error_with_message($msg){
+    $errorMessage = urlencode($msg);
+    header("Location: index.php?error=$errorMessage#signup-page");
 }
