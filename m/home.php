@@ -55,12 +55,12 @@ if(!is_loggedIn()) {
             <div data-role="content">
 		      <?php
               $role = get_current_user_role();
-              echo $role;
+              if($role == 'seller') {
               ?>
                 <h2>
                     Add Inventory
                 </h2>
-                <form action="saveInventory.php" method="POST">
+                <form action="saveInventory.php" method="POST" data-ajax="false">
                     <div data-role="fieldcontain">
                         <label for="textinput1">
                             Item Name
@@ -116,7 +116,9 @@ if(!is_loggedIn()) {
                     <input type="submit" value="Add Item to Inventory">
                 </form>
               <?php
-
+                } else if(role == 'buyer') {
+                    echo "Buyer inventory listing";
+                }
               ?>
             </div>
             <?php footer();?>
