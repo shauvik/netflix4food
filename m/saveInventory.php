@@ -3,7 +3,7 @@ include_once("common.php");
 
 function saveInventory(){
 
-    if(!isset($_POST['inventory_id']) || empty($_POST['inventory_id'])){
+    if(isset($_POST['inventory_id']) && !empty($_POST['inventory_id'])){
         updateInventory();
     } else {
        newInventory();
@@ -14,7 +14,7 @@ function saveInventory(){
 function newInventory(){
     $name = $_POST['name'];
     $quantity = $_POST['quantity'];
-    $image_url = $_POST['image_url'];
+    $image_url = save_uploaded_file("image");
     $organic = $_POST['organic'];
     $unit = $_POST['unit'];
     $price = $_POST['price'];
