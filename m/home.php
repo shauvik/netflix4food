@@ -53,7 +53,7 @@ if(!is_loggedIn()) {
                 <h3>Fuber</h3>
             </div>
             <div data-role="content">
-
+		<p>Welcome, <?php echo $_SESSION['username']; ?></p> 
             </div>
             <?php footer();?>
         </div>
@@ -87,7 +87,7 @@ function footer() {
             <span class="ui-btn-inner"><span class="ui-btn-text">Orders</span><span class="ui-icon ui-icon-check ui-icon-shadow ui-iconsize-18">&nbsp;</span></span></a></li>
     
     <li class="ui-block-c">
-        <a href="logout.php" data-transition="fade" data-theme="a" data-icon="delete" class="ui-btn ui-btn-inline ui-btn-icon-top ui-btn-up-a" data-corners="false" data-shadow="false" data-iconshadow="true" data-iconsize="18" data-wrapperels="span" data-iconpos="top" data-inline="true">
+        <a href="logout.php" data-ajax="false" data-transition="fade" data-theme="a" data-icon="delete" class="ui-btn ui-btn-inline ui-btn-icon-top ui-btn-up-a" data-corners="false" data-shadow="false" data-iconshadow="true" data-iconsize="18" data-wrapperels="span" data-iconpos="top" data-inline="true">
             <span class="ui-btn-inner"><span class="ui-btn-text">Logout</span><span class="ui-icon ui-icon-delete ui-icon-shadow ui-iconsize-18">&nbsp;</span></span></a></li>
     
     </ul>
