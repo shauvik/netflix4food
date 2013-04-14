@@ -19,6 +19,10 @@ function get_current_user_id(){
     return $_SESSION['userId'];
 }
 
+function get_current_user_role(){
+    return $_SESSION['role'];
+}
+
 function is_loggedIn(){
     global $_SESSION;
     print_r($_SESSION);

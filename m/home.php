@@ -53,7 +53,71 @@ if(!is_loggedIn()) {
                 <h3>Fuber</h3>
             </div>
             <div data-role="content">
-		<p>Welcome, <?php echo $_SESSION['username']; ?></p> 
+		      <?php
+              $role = get_current_user_role();
+              echo $role;
+              ?>
+                <h2>
+                    Add Inventory
+                </h2>
+                <form action="saveInventory.php" method="POST">
+                    <div data-role="fieldcontain">
+                        <label for="textinput1">
+                            Item Name
+                        </label>
+                        <input name="name" id="textinput1" placeholder="" value="" type="text">
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="textinput2">
+                            Quantity
+                        </label>
+                        <input name="quantity" id="textinput2" placeholder="" value="" type="text">
+                    </div>
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                            <legend>
+                                Unit
+                            </legend>
+                            <input id="radio3" name="unit" value="lbs" type="radio">
+                            <label for="radio3">
+                                Lbs
+                            </label>
+                            <input id="radio4" name="unit" value="number" type="radio">
+                            <label for="radio4">
+                                Number
+                            </label>
+                            <input id="radio5" name="unit" value="boxes" type="radio">
+                            <label for="radio5">
+                                Boxes
+                            </label>
+                        </fieldset>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                            <legend>
+                                Organic
+                            </legend>
+                            <input id="radio1" name="organic" value="1" type="radio">
+                            <label for="radio1">
+                                Yes
+                            </label>
+                            <input id="radio2" name="organic" value="-1" type="radio">
+                            <label for="radio2">
+                                No
+                            </label>
+                        </fieldset>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="textinput3">
+                            Price in USD
+                        </label>
+                        <input name="price" id="textinput3" placeholder="" value="" type="text">
+                    </div>
+                    <input type="submit" value="Add Item to Inventory">
+                </form>
+              <?php
+
+              ?>
             </div>
             <?php footer();?>
         </div>
