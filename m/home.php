@@ -185,7 +185,7 @@ if(!is_loggedIn()) {
                     
               ?>
             <ul data-role="listview" data-inset="true" data-filter="true">
-                <li data-filtertext="Tangerines Fruit" data-theme="c">
+                <li data-filtertext="Oranges Fruit" data-theme="c">
                     <a href="add.php?id=1" data-rel="dialog">
                         <img src="upload/tang.jpg" class="ui-li-thumb">
                         <h3 class="ui-li-heading">Oranges</h3>
@@ -208,7 +208,6 @@ if(!is_loggedIn()) {
             </ul>
 
             <?php
-
 
                 }
               ?>
