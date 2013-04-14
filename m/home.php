@@ -86,6 +86,11 @@ if(!is_loggedIn()) {
                    echo "<div class=\"success\">{$_GET['msg']}</div>";
                }
 
+
+                if(isset($_GET['error'])){
+                    echo "<div class=\"error\">{$_GET['error']}</div>";
+                }
+
               $role = get_current_user_role();
               if($role == 'seller') {
               ?>

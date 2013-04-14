@@ -12,20 +12,26 @@ function saveInventory(){
 }
 
 function newInventory(){
-    $name = $_POST['name'];
-    $quantity = $_POST['quantity'];
+    $name = isset($_POST['name']) ? $_POST['name'] : "";
+    $quantity = $_POST['quantity'] ? $_POST['quantity'] : 0;
     $image_url = save_uploaded_file("image");
-    $organic = $_POST['organic'];
-    $unit = $_POST['unit'];
-    $price = $_POST['price'];
+    $organic = isset($_POST['organic']) ? $_POST['organic'] : 0;
+    $unit = isset($_POST['unit']) ? $_POST['unit'] : "lbs";
+    $price = isset($_POST['price']) && !empty($_POST['price']) ? $_POST['price'] : 0;
     $user_id = get_current_user_id();
+
+    if(empty($name) || empty($price)) {
+        error_with_message("Name and price is required.");
+        exit;
+    }
+
     $sql = "INSERT INTO inventory (name, quantity, image_url, organic, unit, price, user_id) VALUES('$name', $quantity, '$image_url', $organic, '$unit', $price, $user_id)";
-    echo "SQL:".$sql;
     $mysqli = get_database_connection();
     $mysqli->query($sql) or die("Error in mysql query");
     $mysqli->close();
 
-    header("Location: home.php?msg=Added inventory item#inventory");
+    success_message("Added Inventory Item");
+    exit;
 }
 
 function updateInventory(){
@@ -44,6 +50,18 @@ function updateInventory(){
     $mysqli = get_database_connection();
     $mysqli->query($sql) or die("Error in mysql query");
     $mysqli->close();
+}
+
+
+function error_with_message($msg){
+    $errorMessage = urlencode($msg);
+    header("Location: home.php?error=$msg");
+}
+
+
+function success_message($msg){
+    $errorMessage = urlencode($msg);
+    header("Location: home.php?msg=$msg");
 }
 
 saveInventory();
