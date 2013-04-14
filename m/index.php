@@ -40,7 +40,6 @@
                 alert("Handler for .click() called.");
             });
 
-
             try {
 
     $(function() {
@@ -177,10 +176,10 @@
                             <input name="email" id="textinput6" placeholder="" value="" type="email" />
                         </div>
                         <div data-role="fieldcontain">
-                            <label for="textinput7">
+                            <label for="photo_control">
                                 Photo
                             </label>
-                            <input name="photo" id="textinput7" placeholder="" value="" type="file" accept="image/*;capture=camera" />
+                            <input name="photo" id="photo_control" placeholder="" value="" type="file" accept="image/*;capture=camera"/>
                         </div>
                         <div data-role="fieldcontain">
                             <fieldset data-role="controlgroup" data-type="horizontal">

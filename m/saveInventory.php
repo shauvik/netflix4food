@@ -24,6 +24,8 @@ function newInventory(){
     $mysqli = get_database_connection();
     $mysqli->query($sql) or die("Error in mysql query");
     $mysqli->close();
+
+    header("Location: home.php?msg=Added inventory item#inventory");
 }
 
 function updateInventory(){

@@ -113,6 +113,12 @@ if(!is_loggedIn()) {
                         </label>
                         <input name="price" id="textinput3" placeholder="" value="" type="text">
                     </div>
+                    <div data-role="fieldcontain">
+                        <label for="photo_control">
+                            Photo (optional)
+                        </label>
+                        <input name="image" id="photo_control" placeholder="" value="" type="file" accept="image/*;capture=camera"/>
+                    </div>
                     <input type="submit" value="Add Item to Inventory">
                 </form>
               <?php

@@ -31,7 +31,7 @@ function is_loggedIn(){
 
 
 function save_uploaded_file($file){
-    print_r($_FILES);
+    //print_r($_FILES);
     $allowedExts = array("gif", "jpeg", "jpg", "png");
     $extension = end(explode(".", $_FILES[$file]["name"]));
     if ((($_FILES[$file]["type"] == "image/gif")
