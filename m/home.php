@@ -176,7 +176,7 @@ if(!is_loggedIn()) {
                     <input type="submit" value="Add Item to Inventory">
                 </form>
               <?php
-                } else if(role == 'buyer') {
+                } else if($role == 'buyer') {
                     
               ?>
             <div data-role="fieldcontain">
