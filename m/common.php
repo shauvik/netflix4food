@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 session_start();
 
 function get_database_connection() {
-    $mysqli = new mysqli('fuber.co', 'fuber', 'JE#9nWHh', 'fuber');
+    $mysqli = new mysqli('fuber.co', 'fuber', 'PASSWORD', 'fuber');
 
     /* check connection */
     if (mysqli_connect_errno()) {
